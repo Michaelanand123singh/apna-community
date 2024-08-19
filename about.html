@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Apna Journey</title>
+    <meta name="description" content="Learn more about Apna Journey, a thriving freelance community empowering professionals across India.">
+    <meta name="keywords" content="about us, freelance, India, community, collaboration, opportunities">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <p>At Apna Journey, we believe in the power of community. Our mission is to create a vibrant freelance network that bridges the gap between talent and opportunity across India. Whether you're a seasoned freelancer or just starting out, our platform is designed to support your journey.</p>
+                <p>Founded with the vision to empower freelancers from all walks of life, Apna Journey offers a space for collaboration, learning, and growth. We understand the unique challenges faced by freelancers and have created a community where you can connect with like-minded professionals, showcase your skills, and find projects that match your expertise.</p>
+                <p>Our goals include:</p>
+                <ul>
+                    <li>Providing a platform for freelancers to showcase their talents and find work opportunities</li>
+                    <li>Fostering a collaborative environment where freelancers can connect, share knowledge, and grow together</li>
+                    <li>Highlighting the diverse skill sets available across India, from Bihar to Maharashtra, Delhi to South India</li>
+                    <li>Offering resources, support, and mentorship to help freelancers thrive in their careers</li>
+                </ul>
+                <p>Join Apna Journey today and become part of a community that values your contribution and helps you succeed in the freelance world.</p>
+                <a href="community.html" class="cta-button">Join Our Community</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

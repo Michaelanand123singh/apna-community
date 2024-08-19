@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="In-depth resources and tutorials for mastering [Skill Name]. Handpicked by Apna Journey experts.">
+    <meta name="keywords" content="[Skill Name], Courses, Online Learning, Tutorials">
+    <meta name="author" content="Apna Journey">
+    <title>[Skill Name] - Detailed Course - Apna Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+    </header>
+
+    <main>
+        <section class="course-header">
+            <h1 id="course-title"></h1>
+            <p id="course-description"></p>
+        </section>
+
+        <section class="course-content">
+            <h2>Recommended Videos</h2>
+            <ul id="video-list"></ul>
+        </section>
+
+        <section class="additional-resources">
+            <h2>Additional Resources</h2>
+            <p>Explore more articles, books, and tools to enhance your learning experience.</p>
+            <!-- You can add more content or links here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+
+    <script src="course-detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Journey - All Communities</title>
+    <meta name="description" content="Explore all freelance communities across India with Apna Journey. Find your perfect community and connect with fellow professionals.">
+    <meta name="keywords" content="freelance, India, community, Bihar, Maharashtra, Delhi, South India, collaboration, opportunities">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <meta property="og:title" content="Apna Journey - All Communities">
+    <meta property="og:description" content="Explore all freelance communities across India. Connect, collaborate, and grow with talented professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.apnajourney.com/community">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+    
+    <script>
+        fetch('navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-placeholder').innerHTML = data;
+        });
+    </script>
+
+    <main>
+        <section id="all-communities" class="premium-section">
+            <h1>All Communities</h1>
+            <p>Welcome to Apna Journey! Discover vibrant freelance communities across India and find the perfect network to elevate your career.</p>
+            <div class="community-grid">
+                <article class="community-card" id="andhra-pradesh">
+                    <h2>Andhra Pradesh</h2>
+                    <p>Connect with freelancers in Andhra Pradesh. Collaborate on projects and grow together.</p>
+                    <button onclick="openForm('Andhra Pradesh')">Join Now</button>
+                </article>
+                <!-- Add more states as needed -->
+                <article class="community-card" id="bihar">
+                    <h2>Bihar</h2>
+                    <p>Join our community of Bihar-based freelancers. Collaborate on projects and connect with opportunities across industries.</p>
+                    <button onclick="openForm('Bihar')">Join Now</button>
+                </article>
+                <article class="community-card" id="maharashtra">
+                    <h2>Maharashtra</h2>
+                    <p>Connect with freelancers from Maharashtra. Explore diverse projects and grow your professional network.</p>
+                    <button onclick="openForm('Maharashtra')">Join Now</button>
+                </article>
+                <article class="community-card" id="delhi">
+                    <h2>Delhi</h2>
+                    <p>Be part of the vibrant Delhi freelance community. Find exciting opportunities in the heart of India.</p>
+                    <button onclick="openForm('Delhi')">Join Now</button>
+                </article>
+                <article class="community-card" id="south-india">
+                    <h2>South India</h2>
+                    <p>Join freelancers from South India. Collaborate on projects spanning multiple states and industries.</p>
+                    <button onclick="openForm('South-India')">Join Now</button>
+                </article>
+                <!-- Add other states similarly -->
+            </div>
+        </section>
+
+        <section id="community-highlights" class="premium-section">
+            <h2>Community Highlights</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <h3>Top Projects</h3>
+                    <p>Explore successful projects from our community members and get inspired for your next venture.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="highlight-item">
+                    <h3>Success Stories</h3>
+                    <p>Read about the achievements of freelancers who have made a mark in their respective fields.</p>
+                    <a href="#">Read Stories</a>
+                </div>
+                <div class="highlight-item">
+                    <h3>Upcoming Events</h3>
+                    <p>Stay updated on workshops, meetups, and networking events happening across communities.</p>
+                    <a href="#">See Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="premium-section">
+            <h2>What Our Members Say</h2>
+            <div class="testimonial-grid">
+                <blockquote class="testimonial-item">
+                    <p>"Joining Apna Journey's Bihar community opened doors to new collaborations and projects. Highly recommended!"</p>
+                    <cite>- Ramesh Kumar, Freelancer</cite>
+                </blockquote>
+                <blockquote class="testimonial-item">
+                    <p>"The Maharashtra network has been incredibly supportive in growing my freelance business. Great connections!"</p>
+                    <cite>- Sneha Patel, Designer</cite>
+                </blockquote>
+                <blockquote class="testimonial-item">
+                    <p>"Delhi's community is vibrant and full of opportunities. I found my dream project through Apna Journey!"</p>
+                    <cite>- Aditi Sharma, Developer</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="blog" class="premium-section">
+            <h2>Our Blog</h2>
+            <p>Stay updated with the latest trends, tips, and insights from the freelance world. Check out our recent blog posts.</p>
+            <div class="blog-post-grid">
+                <article class="blog-post">
+                    <h3>How to Find the Right Freelance Community for You</h3>
+                    <p>Discover tips on selecting a community that aligns with your professional goals and interests.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h3>Top 5 Networking Tips for Freelancers</h3>
+                    <p>Maximize your networking efforts with practical tips that will help you build valuable connections.</p>
+                    <a href="#">Read More</a>
+                </article>
+                <article class="blog-post">
+                    <h3>The Future of Freelancing in India</h3>
+                    <p>Explore the emerging trends and opportunities in the freelance market across India.</p>
+                    <a href="#">Read More</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="form-overlay" class="overlay">
+        <div class="overlay-content">
+            <button class="close-btn" onclick="closeForm()">&times;</button>
+            <h2 id="form-title"></h2>
+            <div id="form-container">
+                <!-- Google Form will be embedded here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore curated courses in Video Editing, Web Development, Freelancing, and more. Handpicked by Apna Journey experts to boost your skills.">
+    <meta name="keywords" content="Courses, Video Editing, Web Development, Freelancing, Online Learning">
+    <meta name="author" content="Apna Journey">
+    <title>Curated Courses - Apna Journey</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+    </header>
+
+    <main>
+        <section class="courses-header">
+            <h1>Explore Our Curated Courses</h1>
+            <p>Learn new skills from the best resources available online, handpicked by our experts.</p>
+        </section>
+
+        <section class="courses-list">
+            <div class="course-item">
+                <img src="img/courses/video-editing.jpg" alt="Video Editing">
+                <h2>Video Editing</h2>
+                <p>Master video editing with these top resources.</p>
+                <a href="#" class="btn-primary" data-course-id="video-editing">View Course</a>
+            </div>
+
+            <div class="course-item">
+                <img src="img/courses/web-development.jpg" alt="Web Development">
+                <h2>Web Development</h2>
+                <p>Become a web developer with these curated tutorials.</p>
+                <a href="#" class="btn-primary" data-course-id="web-development">View Course</a>
+            </div>
+
+            <div class="course-item">
+                <img src="img/courses/freelancing.jpg" alt="Freelancing">
+                <h2>Freelancing</h2>
+                <p>Learn how to start and grow your freelancing career.</p>
+                <a href="#" class="btn-primary" data-course-id="freelancing">View Course</a>
+            </div>
+        </section>
+
+        <section id="course-details" class="course-details">
+            <!-- Course details will be dynamically loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+
+    <script src="courses.js"></script>
+</body>
+
+</html>
