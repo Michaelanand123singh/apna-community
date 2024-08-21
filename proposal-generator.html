@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal Generator - Apna Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+    </header>
+
+    <main>
+        <section id="proposal-generator">
+            <div class="container">
+                <h1>Proposal Generator</h1>
+                <p>Create your freelance proposal by filling out the form below.</p>
+                <!-- Add form or tool interface here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

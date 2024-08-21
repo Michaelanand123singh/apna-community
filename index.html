@@ -19,16 +19,15 @@
     <header>
         <div id="navbar-placeholder"></div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        fetch('navbar.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('navbar-placeholder').innerHTML = data;
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    });
             });
-    });
-</script>
-
+        </script>
     </header>
 
     <div id="notification-banner" class="notification-banner">
@@ -103,8 +102,6 @@
                 </div>
             </div>
         </section>     
-
-        
     </main>
 
     <footer>
@@ -119,8 +116,7 @@
         </div>
     </div>
 
-
-    <script src="path/to/contact-form.js"></script>
+    <!-- Import your JS file -->
     <script src="script.js"></script>
 </body>
 

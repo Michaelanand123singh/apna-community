@@ -24,7 +24,10 @@ function openTab(stateName) {
     setTimeout(() => {
         content.innerHTML = `
             <h3>${stateName} Freelancers</h3>
+            <div id="form-container">
             <iframe src="${stateForms[stateName]}" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            <button class="fullscreen-btn" onclick="openFullscreen('tab-content')">Full Screen</button>
+            </div>
         `;
         
         // Fade in content
@@ -37,11 +40,30 @@ function openForm(stateName) {
     const overlay = document.getElementById('form-overlay');
     const formTitle = document.getElementById('form-title');
     const formContainer = document.getElementById('form-container');
+    const iframe = document.getElementById('form-iframe');
 
     formTitle.textContent = `Join ${stateName} Community`;
-    formContainer.innerHTML = `<iframe src="${stateForms[stateName]}" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`;
+    formContainer.innerHTML = `
+        <button id="fullscreen-button" onclick="openFullscreen('form-container')">Full Screen</button>
+        <iframe src="${stateForms[stateName]}" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" id="form-iframe">Loading…</iframe>
+    `;
     
     overlay.style.display = 'block';
+}
+
+// Function to open full-screen mode
+function openFullscreen(containerId) {
+    const elem = document.getElementById(containerId);
+
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { // Firefox
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, and Opera
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { // IE/Edge
+        elem.msRequestFullscreen();
+    }
 }
 
 // Function to close the form overlay
@@ -126,4 +148,5 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
+
 

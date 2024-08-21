@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apna Journey - Free Tools</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                fetch('navbar.html')
+                    .then(response => response.text())
+                    .then(data => {
+                        document.getElementById('navbar-placeholder').innerHTML = data;
+                    });
+            });
+        </script>
+    </header>
+
+    <main>
+        <section id="tools-hero">
+            <div class="hero-content">
+                <h1>Free Tools for Freelancers</h1>
+                <p>Use our free tools to generate proposals, invoices, and more to help you manage your freelance business efficiently.</p>
+            </div>
+        </section>
+
+        <section id="tools-list">
+            <div class="container">
+                <div class="tool-item">
+                    <h2>Proposal Generator</h2>
+                    <p>Create professional proposals in minutes.</p>
+                    <a href="proposal-generator.html" class="cta-button">Try Now</a>
+                </div>
+                <div class="tool-item">
+                    <h2>Invoice Generator</h2>
+                    <p>Generate invoices quickly and easily.</p>
+                    <a href="invoice-generator.html" class="cta-button">Try Now</a>
+                </div>
+                <!-- Add more tools here as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
