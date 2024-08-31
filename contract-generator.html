@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Generator - Apna Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="contract-generator.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div id="navbar-placeholder"></div>
+    </header>
+
+    <main>
+        <section id="contract-generator">
+            <h1>Contract Generator</h1>
+            <form id="contract-form">
+                <label for="client-name">Client Name:</label>
+                <input type="text" id="client-name" required>
+
+                <label for="project-description">Project Description:</label>
+                <textarea id="project-description" required></textarea>
+
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" required>
+
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" required>
+
+                <label for="payment-amount">Payment Amount:</label>
+                <input type="number" id="payment-amount" required>
+
+                <label for="payment-terms">Payment Terms:</label>
+                <textarea id="payment-terms" required></textarea>
+
+                <button type="submit">Generate Contract</button>
+            </form>
+
+            <div id="contract-preview" style="display: none;">
+                <h2>Contract Preview</h2>
+                <div id="contract-content"></div>
+                <button id="download-pdf">Download as PDF</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Apna Journey. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
