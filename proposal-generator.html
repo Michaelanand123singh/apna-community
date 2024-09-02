@@ -6,28 +6,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proposal Generator - Apna Journey</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="proposal-generator" href="proposal-generator.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
         <div id="navbar-placeholder"></div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                fetch('navbar.html')
-                    .then(response => response.text())
-                    .then(data => {
-                        document.getElementById('navbar-placeholder').innerHTML = data;
-                    });
-            });
-        </script>
+
     </header>
+
 
     <main>
         <section id="proposal-generator">
             <div class="container">
                 <h1>Proposal Generator</h1>
-                <p>Create your freelance proposal by filling out the form below.</p>
-                <!-- Add form or tool interface here -->
+                <p class="subtitle">Create your professional freelance proposal in minutes.</p>
+                
+                <form id="proposal-form">
+                    <div class="form-section">
+                        <h2>1. Service Provider Details</h2>
+                        <input type="text" id="fullName" placeholder="Full Name" required>
+                        <input type="text" id="professionalTitle" placeholder="Professional Title" required>
+                        <input type="text" id="businessName" placeholder="Business Name (if applicable)">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="tel" id="phone" placeholder="Phone Number">
+                        <input type="url" id="website" placeholder="Website">
+                    </div>
+
+                    <div class="form-section">
+                        <h2>2. Client Details</h2>
+                        <input type="text" id="clientCompany" placeholder="Client's Company Name" required>
+                        <input type="text" id="clientContact" placeholder="Main Point of Contact" required>
+                        <input type="text" id="clientTitle" placeholder="Contact's Job Title">
+                        <input type="email" id="clientEmail" placeholder="Contact's Email" required>
+                        <input type="tel" id="clientPhone" placeholder="Contact's Phone Number">
+                    </div>
+
+                    <div class="form-section">
+                        <h2>3. Project Overview</h2>
+                        <textarea id="projectObjective" placeholder="Main project objective" required></textarea>
+                        <textarea id="projectChallenge" placeholder="Specific problem or challenge this project will address" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>4. Proposed Solution</h2>
+                        <textarea id="services" placeholder="Specific services or deliverables you will provide" required></textarea>
+                        <textarea id="benefits" placeholder="How will your solution benefit the client's business" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>5. Your Qualifications</h2>
+                        <textarea id="experience" placeholder="Relevant experience or skills" required></textarea>
+                        <textarea id="casestudy" placeholder="Brief example or case study of a similar project" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>6. Timeline and Milestones</h2>
+                        <input type="date" id="startDate" required>
+                        <input type="date" id="endDate" required>
+                        <textarea id="milestones" placeholder="Key milestones or deliverables" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>7. Pricing and Payment</h2>
+                        <input type="number" id="totalCost" placeholder="Total cost for your services" required>
+                        <select id="pricingStructure" required>
+                            <option value="">Select pricing structure</option>
+                            <option value="fixed">Fixed Price</option>
+                            <option value="hourly">Hourly Rate</option>
+                            <option value="milestone">Milestone-based</option>
+                        </select>
+                        <textarea id="paymentTerms" placeholder="Payment terms" required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>8. Process and Communication</h2>
+                        <textarea id="updateProcess" placeholder="How will you keep the client updated on project progress" required></textarea>
+                        <input type="text" id="responseTime" placeholder="Typical response time for client communications" required>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>9. Next Steps</h2>
+                        <textarea id="nextSteps" placeholder="What action should the client take to move forward" required></textarea>
+                        <textarea id="contactInfo" placeholder="How can the client contact you with questions or to accept the proposal" required></textarea>
+                    </div>
+
+                    <button type="submit" id="generate-proposal">Generate Proposal</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="proposal-preview" style="display: none;">
+            <div class="container">
+                <h2>Your Generated Proposal</h2>
+                <div id="proposal-content"></div>
+                <button id="download-pdf">Download as PDF</button>
             </div>
         </section>
     </main>
@@ -36,7 +110,10 @@
         <p>&copy; 2024 Apna Journey. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
+    <script src="proposal-generator.js"></script>
 </body>
 
 </html>
+
