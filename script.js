@@ -149,4 +149,22 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
+// JavaScript for responsive navbar toggle
+
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+
+    // Close the menu when clicking a link (optional)
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+        });
+    });
+});
+
 

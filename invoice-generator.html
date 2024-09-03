@@ -22,6 +22,16 @@
         <div class="container">
             <h1 class="display-5 fw-bold">Apna Journey</h1>
         </div>
+        <div id="navbar-placeholder"></div>
+        <script>
+            // Load the navbar content
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar-placeholder').innerHTML = data;
+                })
+                .catch(error => console.error('Error loading navbar:', error));
+        </script>
     </header>
 
     <main class="container my-5">
